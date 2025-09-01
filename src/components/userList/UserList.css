@@ -1,0 +1,81 @@
+.userList-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem 1rem;
+  padding: 1rem;
+}
+
+/* Card umumiy ko‘rinishi */
+.card-inner {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background: #fff;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-inner:hover {
+  transform: scale(1.05) rotate(-3deg);
+  -webkit-box-shadow: 4px 4px 16px 0px rgba(34, 60, 80, 0.3);
+  -moz-box-shadow: 4px 4px 16px 0px rgba(34, 60, 80, 0.3);
+  box-shadow: 4px 4px 16px 0px rgba(34, 60, 80, 0.3);
+}
+
+.card-inner img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Tugma */
+.card-inner button {
+  border: none;
+  font-family: inherit;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-inner button:hover {
+  background-color: #555;
+}
+
+/* 📱 Mobil ekranlar uchun */
+@media (max-width: 768px) {
+  .userList-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem 0.8rem;
+  }
+
+  .card-inner img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* 📱 Juda kichik ekranlar uchun */
+/* 📱 Juda kichik ekranlar uchun (telefon) */
+@media (max-width: 480px) {
+  .userList-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 ta ustun */
+    gap: 1rem;
+  }
+
+  .card-inner {
+    padding: 0.8rem;
+  }
+
+  .card-inner img {
+    width: 100px;
+    height: 100px;
+  }
+
+}
